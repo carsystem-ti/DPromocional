@@ -1,0 +1,17 @@
+﻿.divInternoGrid
+{
+     height: 350px; 
+     width: 748px; 
+     overflow: auto;
+  
+}
+#gridIndicacao {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+#divGridIndicacao {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 200px;
+    width: 100%;
+}

@@ -1,0 +1,131 @@
+﻿/* configuurações gerais*/
+.divLeft {
+    float: left;
+}
+
+.divLimpaEsquerda {
+    clear: left;
+}
+
+/* grid Pesquisa*/
+
+.colCodigo {
+    width: 08%;
+}
+
+.colNome {
+    width: 40%;
+}
+
+.colDocumento {
+    width: 22%;
+}
+
+.colContrato {
+    width: 10%;
+}
+
+.colCodGr {
+    width: 20%;
+}
+
+.divSomeSelect {
+    display: none;
+    width: 0%;
+}
+
+.divCabecGrid {
+    width: 99%;
+}
+
+/* Grid Valores Indicações*/
+
+.colVlIndicacao {
+    width: 08%;
+}
+
+.colVlNome {
+    width: 28%;
+}
+
+.colVlDataLiberacao {
+    width: 17%;
+}
+
+.colVlDataPagamento {
+    width: 17%;
+}
+
+.colVlStatus {
+    width: 13%;
+}
+
+.colVlDataCadastro {
+    width: 17%;
+}
+
+/* Grid Débitos*/
+
+.colCodigoDebito {
+    width: 20%;
+}
+
+.colDataVencimento {
+    width: 25%;
+}
+
+.colValorDebito {
+    width: 20%;
+}
+
+.colSituacao {
+    width: 35%;
+}
+
+/* divs especificas*/
+
+#divBtnBuscar {
+    margin-left: 25px;
+    margin-top: 80px;
+    clear: left;
+}
+
+#divResultadoBusca {
+    float: left;
+    width: 810px;
+    margin-top: -10px;
+    margin-left: 20px;
+}
+
+#divGridResultadoBusca {
+    overflow: auto;
+    height: 105px;
+    width: 100%;
+}
+
+#divGridValoresIndicacoes {
+    clear: left;
+    margin-top: 130px;
+    width: 100%;
+    height: 170px;
+}
+
+#divGridDebitos {
+    clear: left;
+    margin-top: 10px;
+    width: 100%;
+    height: 110px;
+}
+
+#divGridValoresIndicacoes2 {
+    overflow: auto;
+    height: 130px;
+    width: 100%;
+}
+
+#divGridDebitos2 {
+    overflow: auto;
+    height: 50px;
+}
+
+

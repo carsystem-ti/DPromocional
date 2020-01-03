@@ -1,0 +1,30 @@
+﻿.mensMenu {
+    font-size: x-Large;
+}
+
+.divEsquerda {
+    float: left;
+}
+
+.divDireita {
+    float: right;
+}
+
+.divCentral {
+    float: none;
+    margin-left: 100px;
+    /*text-align: center;*/
+}
+
+.divTextoCentroDivDireita {
+    text-align: center;
+    margin-top: -269px;
+}
+
+.divTextoCentro {
+    text-align: center;
+}
+
+.divTextoCentroDivCentro {
+    margin-left: 475px;
+}

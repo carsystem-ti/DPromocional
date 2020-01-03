@@ -1,0 +1,36 @@
+﻿.fieldset {
+    border-left: 1px solid #72951A;
+    border-right: 1px #72951A;
+    border-top: 20px solid #72951A;
+    border-bottom: 1px solid #72951A;
+    margin: 5px;
+    padding: 20px;
+    height: 319px;
+}
+
+.fieldset legend {
+    background-color:#72951A;
+    line-height: 30px;
+    color:white;
+    /* uncomment line below for IE8 */
+    /* margin-top: -50px; */
+}
+.fieldset {
+    border-left: 1px solid #72951A;
+    border-right: 1px #72951A;
+    border-top: 30px solid #72951A;
+    border-bottom: 1px solid #72951A;
+    margin: 5px;
+    padding: 20px;
+    width: 1099px;
+}
+
+.fieldsetGr {
+    border-left: 1px solid #72951A;
+    border-right: 1px #72951A;
+    border-top: 50px solid #72951A;
+    border-bottom: 1px solid #72951A;
+    margin: 5px;
+    padding: 20px;
+    width: 346px;
+}

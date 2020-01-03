@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="principal.master.cs" Inherits="DPromocional.principal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <link href="css/comum.css" rel="stylesheet" />
+
+    <title>Dinheiro Promocional</title>    
+  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="principal">
+            <div class="separadorBranco">
+            </div>
+            <div class="divCabec">
+                <div class="divInfFranquia">
+                    <asp:Label ID="lbFranquia" runat="server" Text="Label">Franquia: teste</asp:Label>
+                    <br />
+                    <asp:Label ID="lbNome" runat="server" Text="Label">Usuario: teste</asp:Label>
+                    <br />
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="lkSmall" OnClick="LinkButton1_Click">[Sair]</asp:LinkButton>
+                    <asp:LinkButton ID="lkbtVoltar" runat="server" CssClass="lkSmall" Visible="false" OnClick="lkbtVoltar_Click">[Voltar]</asp:LinkButton>
+                </div>                
+                <img alt="www.carsystem.com" src="img/logo300.png" class="divLogCS"/>
+            </div>
+            <div class="separadorBranco">
+            </div>
+            <div class="separadorVerde">
+            </div>
+            <div class="divPrincipal">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿.TABLE.zebra 
+{
+	background-color: #6699FF;
+}
+
+.TABLE.zebra TR 
+{
+	background-color:Orange;
+}
+
+.TABLE.zebra TH 
+{
+	background: #253F73;
+	color: #FFFFFF;
+	padding:2px;
+	font-weight:bold;
+}
+
+.TABLE.zebra TD 
+{
+	padding: 2px;
+}

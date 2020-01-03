@@ -1,0 +1,140 @@
+﻿/* Fonte Inicial */
+fonteSistema, .rotulo, .contText, #btnEntrar, .links {
+    font-family: "Franklin Gothic Book", "Franklin Gothic Demi", Arial;
+}
+
+/* Configuração de div */
+
+.imgTop {
+    display: table;
+    margin: 0 auto;
+    width: 1020px;
+}
+
+.divEsquerda {
+    float: left;
+}
+
+.divDados {
+    display: table;
+    margin: 0 auto;
+    background-color: #ABB19F;
+    width: 1020px;
+    height: 300px;
+}
+
+.divLogImg {
+    float: left;
+    width: 544px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.divLoginSenha {
+    float: right;
+    width: 476px;
+    height: auto;
+}
+
+.divMensErro {
+    margin-top: -260px;
+    margin-left: 71px;
+}
+
+.divLogin {
+    margin-left: 71px;
+}
+
+.divSenha {
+    margin-left: 67px;
+}
+
+.divEsqueceuSenha {
+    margin-left: 140px;
+}
+
+.divUsuarioNovo {
+    margin-left: 180px;
+}
+
+/* Configuração basica de elementos */
+
+.mensErroEmailInvalido {
+    margin-left: -133px;
+}
+
+
+.rotulo {
+    font-size: xx-large;
+    height: 35px;
+}
+
+.links {
+    font-size: x-large;
+}
+
+.confTXT, #txtSenha, #txtLogin {
+    height: 35px;
+    font-size: Large;
+}
+
+.mensErro {
+    color: Red;
+}
+
+.confTextCinza
+{
+    border-style: solid;
+    background-color: #EEEFEC;
+    border-color: #404037;
+}
+
+.separadorLaranja
+{
+    display: table;
+    margin: 0 auto;
+    background-color: #72951A;
+    width: 1020px;
+    height: 30px;
+}
+
+.separadorCinza
+{
+    display: table;
+    margin: 0 auto;
+    background-color: #59B0B9;
+    width: 1020px;
+    height: 100px;
+}
+
+.separadorBranco
+{
+    display: table;
+    margin: 0 auto;
+    width: 1020px;
+    height: 10px;
+}
+
+/* ID's de elementos */
+#txtSenha {
+    width: 170px;
+}
+
+#txtLogin {
+    width: 250px;
+}
+
+/* Elementos */
+input[type=submit] {
+    border-color: #404037;
+    border-style: solid;
+    height: 40px;
+    width: 76px;
+    font-size: large;
+    position: relative;
+}
+
+body {
+    font-family: "Franklin Gothic Book", "Franklin Gothic Demi", Arial;
+}

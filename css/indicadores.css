@@ -1,0 +1,176 @@
+﻿#div_3
+{
+    position: fixed;
+    float: right;
+    margin: 50px;
+}
+
+.panel
+{
+    float: left;
+}
+
+.panelesquerda
+{
+    float: left;
+    top: 0px;
+}
+
+.paneldireita
+{
+    float: right;
+    top: 0px;
+}
+
+.esquerda
+{
+    float: left;
+    width: 350px;
+    height: 29px;
+}
+
+.direita
+{
+    float: right;
+    width: 125px;
+}
+.PainelIndicador
+{
+    float: right;
+    width:41%;
+    margin-top:1px;
+}
+
+.grid
+{
+    float:left;
+    width:47%;
+    margin-top:1px;
+    height: 150px;
+}
+.divSomeSelect {
+    display: none;
+    width: 0%;
+}
+.PainelAgenda
+{
+    float: right;
+     margin-left:-60px;
+}
+.fild
+{
+    float: right;
+       width:60%;
+       margin-right:-90px;
+       height:50px;
+}
+.infCliente
+{
+    float:left;
+    height:108px;
+    width:476px;
+}
+.cod
+{
+    width: 64px;
+}
+.doc
+{
+    width: 177px;
+}
+.nome
+{
+     width: 383px;
+}
+.telefone
+{
+    width: 328px;
+}
+.celular
+{
+     width: 14%;
+}
+.fildsetDadosBasicos
+{
+    width: 487px;
+    height: 96px;
+}
+.TextDadosBasicos
+{
+    float: left; 
+    width: 476px;
+}
+.fildsetGravarIndicacao
+{
+    width: 309px; 
+    height: 177px;
+}
+.divgravaIndicacao
+{
+    float:right; 
+    width: 308px; 
+    margin-top: -250px; 
+    height: 175px;
+     margin-right: 50px;
+}
+.GeralGrid
+{
+    width: 894px; 
+    height: 261px;
+}
+.divInternoGrid
+{
+     height: 350px; 
+     width: 748px; 
+     overflow: auto;
+  
+}
+.divAgenda
+{
+    float: left; 
+    margin-left:25px; 
+    height: 88px; 
+    width: 221px;
+}
+.divDadosBancarios
+{
+    float: right;
+     width: 420px;
+     height: 92px;
+}
+.fildDadosBancarios
+{
+    width: 380px; 
+    height:95px;
+}
+.divTextDadosBancarios
+{
+    width: 355px;
+}
+.divTextDadosBasicos
+{
+    float: left; width: 476px;
+    height: 23px;
+}
+.btnAtualizarBancos
+{
+    float: right; 
+    width: 137px; 
+    height: 33px;
+}
+
+.divInternaDadosAgenda
+{
+    width: 214px;
+}
+.fildsetAgenda
+{
+    width: 217px; 
+    height: 95px;
+    margin-left: 16px;
+}
+.atualiza
+{
+    float:left;
+    margin-left:20px;
+}

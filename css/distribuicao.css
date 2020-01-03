@@ -1,0 +1,69 @@
+﻿.gridCentral
+{
+  float: left;
+ width: 779px;
+}
+
+#col2
+{
+    width: 559px;
+    float: left;
+    height: 194px;
+}
+
+#TxtTotal
+{
+    width: 149px;
+    float: left;
+    height: 30px;
+}
+
+#cmbGR
+{
+    width: 169px;
+    float: left;
+    height: 29px;
+}
+
+  div.geral
+    {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 48px;
+        width: 730px;
+    }
+
+    div.campo
+    {
+        float: left;
+        width: 240px;
+        height: 50px;
+        top: 0px;
+    }
+    .radio{
+    border: 2px solid #6E9217;
+    background-color: #98C723;
+    color: black;
+    }
+.menu
+{
+    float: left; 
+    width: 810px;
+}
+.Dlabel
+{
+    float: left; 
+    width: 645px
+}
+.selecao
+{
+    float: left;
+     width: 782px
+}
+.QuantitivoGrs 
+{
+    float:right; 
+    margin: 50px; 
+    margin-right:20px;
+}

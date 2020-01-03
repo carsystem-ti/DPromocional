@@ -1,0 +1,220 @@
+﻿body {
+    font-family: Calibri, Arial;
+}
+
+td {
+    background-color: #C5D9F1;
+    border-color: #C5D9F1;
+    border-style: none;
+    border-width: 0px;
+    color: black;
+    font-size: medium;
+}
+
+.divAzulTitulo {
+    background-color: #0070C0;
+    color: #FFFF00;
+    font-weight: bold;
+    text-align: center;
+}
+
+.divLinhaBranca {
+    width: 60px;
+}
+
+.divLinhaAzulClara {
+    background-color: #C5D9F1;
+    color: black;
+    font-weight: bold;
+}
+
+.divLinhaBranca {
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+
+.Analitico td {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    font-size: small;
+}
+
+.AnaliticoHeader th {
+    background-color: #002060;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    font-size: small;
+}
+
+.AnaliticoFooter td {
+    background-color: #002060;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    font-size: small;
+}
+
+.Alternado td {
+    background-color: white;
+}
+
+.Negativo td {
+    color: red;
+}
+
+.divCabecGrid {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.colPeriodo {
+    width: 40%;
+}
+
+.colValor {
+    width: 10%;
+}
+
+.colBotao {
+    width: 10%;
+}
+
+.colNotaFiscal {
+    width: 10%;
+}
+
+
+.colDataLiberacao {
+    width: 10%;
+}
+
+.colDataPagamento {
+    width: 10%;
+}
+
+.colResponsavel {
+    width: 10%;
+}
+
+.colFonteNegrito {
+    font-weight: bold;
+}
+
+.btnAnalitico {
+    -moz-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+    background: -moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+    background-color: #79bbff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 2px 6px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #528ecc;
+}
+
+    .btnAnalitico:hover {
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+        background: -moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+        background-color: #378de5;
+    }
+
+    .btnAnalitico:active {
+        position: relative;
+        top: 1px;
+    }
+
+.colGridVendaData {
+    width: 5%;
+}
+
+.colGridVendaVendedor {
+    width: 14%;
+}
+
+.colGridVendaContrato {
+    width: 5%;
+}
+
+.colGridVendaCDV {
+    width: 4%;
+}
+
+.colGridVendaProduto {
+    width: 22%;
+}
+
+.colGridVendaValor {
+    width: 5%;
+}
+
+.colGridVendaDesconto {
+    width: 5%;
+}
+
+.colGridVendaPerDesc {
+    width: 4%;
+}
+
+.colGridVendaVlCobrado {
+    width: 6%;
+}
+
+.colGridVendaForma {
+    width: 4%;
+}
+
+.colGridVendaComissao {
+    width: 5%;
+}
+
+.colGridVendaPer {
+    width: 3%;
+}
+
+.colGridVendaTipo {
+    width: 3%;
+}
+
+.colGridVendaDC {
+    width: 2%;
+}
+
+.colGridVendaNrDiasCanc {
+    width: 7%;
+}
+
+.colGridVendaNrParcelas {
+    width: 6%;
+}
+
+.tbTotalGeral {
+    width: 100%;
+    border-width: 0px;
+    border-style: solid;
+    border-spacing: 0px;
+    font-weight: bold;
+}
+
+span {
+    font-family: Calibri, Arial;
+}

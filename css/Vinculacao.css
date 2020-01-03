@@ -1,0 +1,13 @@
+﻿.divInternoGrid{
+    float:left; 
+    height: 285px; 
+     width: 600px; 
+     overflow: auto;
+     margin-left:30%;
+    margin-top:40px;
+}
+.DivNumeroNota
+{
+    float:left;
+    margin-left:20%;
+}

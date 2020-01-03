@@ -1,0 +1,98 @@
+﻿/* Configuração generica */
+.divMetadeSuperior {
+    width: 100%;
+    height: 50%;
+}
+
+.divWidth100 {
+    width: 100%;
+}
+
+.divCabecGrid {
+    width: 99%;
+}
+
+/* Configuração Grid Indicadores*/
+
+.colIndicadoresCod {
+    width: 11%;
+}
+
+.colIndicadoresInd {
+    width: 57%;
+}
+
+.colIndicadoresDoc {
+    width: 32%;
+}
+
+#divGridIndicadores {
+    overflow: auto;
+    height: 400px;
+    width: 100%;
+}
+
+/* Configuração Grid Indicação*/
+
+#gridIndicacao {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+#divGridIndicacao {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.colIndicacaoCod {
+    width: 8%;
+}
+
+.colIndicacaoIndicado {
+    width: 25%;
+}
+
+.colIndicacaoTelefone {
+    width: 10%;
+}
+
+.colIndicacaoCelular {
+    width: 10%;
+}
+
+.colIndicacaoEMail {
+    width: 27%;
+    /* overflow: auto;     */
+}
+
+.colIndicacaoStatus {
+    width: 10%;
+}
+
+.colIndicacaoCT {
+    width: 10%;
+}
+
+/* Configuração por identificação */
+#divPrincipal {
+    width: 100%;
+    height: 500px;
+}
+
+#divEsquerda {
+    float: left;
+    width: 50%;
+}
+
+#divDireita {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+#divGridResultadoBusca {
+    overflow: auto;
+    height: 105px;
+    width: 100%;
+}
