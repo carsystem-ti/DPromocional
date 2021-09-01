@@ -32,7 +32,7 @@ namespace DPromocional
             }
             lbMensErro.Visible = false;
         }
-
+        
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             daoRelatorio DaoRelatorio = new daoRelatorio();
