@@ -2,16 +2,23 @@
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <link href="css/Relatorio.css" rel="stylesheet" />
 
+<style type="text/css">
+    .auto-style1 {
+        width: 161px;
+    }
+</style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <script type="text/javascript" src="scripts/MaskedEditFix.js"></script>
+
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
         <ContentTemplate>
             <asp:Label ID="lbMensErro" ForeColor="Red" runat="server" Text="" Visible="false"></asp:Label>
@@ -54,6 +61,7 @@
     &nbsp;
     
     <br />
+
     <br />
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
@@ -325,9 +333,16 @@
                     </Columns>
                 </asp:GridView>
                 <br />
-                <div class="divAzulTitulo">
+                <fieldset visible="false" class="auto-style1">
+                    <asp:Label ID="lbexport_gridSinteticoCreditos" runat="server" Font-Bold="True" Text="Exportar para.:" visible="true"></asp:Label>
+                    <asp:ImageButton ID="imggridVendaPolitica" runat="server" AlternateText="Exportar Para o Excel" Height="30px" ImageUrl="~/img/btn_excel.png" OnClick="imgrelatorio_Click" Visible="true" Width="33px" />
+                    &nbsp;
+                </fieldset>
+                <br />
+
+<%--                <div class="divAzulTitulo">
                     <asp:Label ID="lbPeriodoVendaNaoPolitica" runat="server" Text="Período de apuração  01/07/2013 a 31/07/2013"></asp:Label>
-                </div>
+                </div>--%>
                 <asp:GridView ID="gridForaVendaPolitica" runat="server" CssClass="Analitico" HeaderStyle-CssClass="AnaliticoHeader" ShowFooter="True" FooterStyle-CssClass="AnaliticoFooter" AutoGenerateColumns="false" Width="100%" OnRowDataBound="gridVendaPolitica_RowDataBound">
                     <Columns>
                         <asp:BoundField DataField="dt_geracao" HeaderText="Data" ItemStyle-HorizontalAlign="Center" ItemStyle-CssClass="colGridVendaData" />
@@ -348,6 +363,8 @@
                         <asp:BoundField DataField="nr_parcelas" HeaderText="Nr Parcelas" ItemStyle-HorizontalAlign="Right" ItemStyle-CssClass="colGridVendaNrParcelas" />
                     </Columns>
                 </asp:GridView>
+
+
                 <br />
                 <table class="tbTotalGeral">
                     <tr class="AnaliticoFooter">
@@ -442,6 +459,7 @@
             <asp:AsyncPostBackTrigger ControlID="gridSintetico" EventName="RowCommand" />
             <asp:AsyncPostBackTrigger ControlID="lkbtVoltar" EventName="Click" />
             <asp:AsyncPostBackTrigger ControlID="gridSinteticoAjusteCre" EventName="RowCommand" />
+            <asp:AsyncPostBackTrigger ControlID="gridVendaPolitica" />
         </Triggers>
     </asp:UpdatePanel>
 </asp:Content>

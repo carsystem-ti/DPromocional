@@ -34,7 +34,8 @@ namespace VendasIndicador
                 {
                     AcessoLogin acessoLogin = new AcessoLogin(txtLogin.Text, txtSenha.Text);                    
                     Session["acessoLogin"] = acessoLogin;                    
-                    Response.Redirect("Home.aspx");
+                    //Response.Redirect("Home.aspx");
+                    Response.Redirect("Relatorio.aspx");
                 }
                 catch (SqlException ex)
                 {

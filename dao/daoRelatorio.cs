@@ -189,9 +189,20 @@ namespace DPromocional.dao
             }
         }
 
-        public DataTable getFranquias()
+        public DataTable getFranquias(int idFranquia)
         {
-            return getDataTableSQL("cnxDpromocional", "select id_franquia,ds_franquia from Principal.Franquia.tbl_Franqueado where fl_ativo = 'S'");
+            //return getDataTableSQL("cnxDpromocional", "select id_franquia,ds_franquia from Principal.Franquia.tbl_Franqueado where fl_ativo = 'S'");
+            SqlParameter[] parametros = {
+                                            new SqlParameter("@tp", idFranquia)
+                                        };
+            try
+            {
+                return getDataTableProc("cnxDpromocional", "[Principal].[Franquia].[pro_getFolhaLoja]", parametros);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public DataTable getAnaliticoAjusteCredito(int idFranquia, int idAgenda)

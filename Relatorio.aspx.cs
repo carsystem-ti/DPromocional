@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,6 +13,7 @@ namespace DPromocional
 {
     public partial class Relatorio : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,7 +25,7 @@ namespace DPromocional
                 {
                     ddlFranquia.Visible = true;
                     daoRelatorio DaoRelatorio = new daoRelatorio();
-                    ddlFranquia.DataSource = DaoRelatorio.getFranquias();
+                    ddlFranquia.DataSource = DaoRelatorio.getFranquias(16);
                     ddlFranquia.DataValueField = "id_franquia";
                     ddlFranquia.DataTextField = "ds_franquia";
                     ddlFranquia.DataBind();
@@ -101,17 +104,14 @@ namespace DPromocional
                     gridVendaPolitica.DataSource = dtPoliticaVenda;
                     gridVendaPolitica.DataBind();
 
+                    Session.Add("RelPedidos", dtPoliticaVenda);
+
                     decimal totVlUnitario = 0;
                     decimal totVlDesconto = 0;
                     decimal totVlBaseCom = 0;
                     decimal totVlComissao = 0;
+
                     calcSubTotal(gridVendaPolitica.FooterRow, dtPoliticaVenda, ref totVlUnitario, ref totVlDesconto, ref totVlBaseCom, ref totVlComissao);
-
-                    dtPoliticaVenda = DaoRelatorio.getAnaliticoForaPoliticaVenda(Convert.ToInt32(Session["FranquiaRel"]), Convert.ToInt32(idAgenda.Value));
-                    gridForaVendaPolitica.DataSource = dtPoliticaVenda;
-                    gridForaVendaPolitica.DataBind();
-
-                    calcSubTotal(gridForaVendaPolitica.FooterRow, dtPoliticaVenda, ref totVlUnitario, ref totVlDesconto, ref totVlBaseCom, ref totVlComissao);
 
                     lbTotValor.Text = totVlUnitario.ToString("###,###,##0.00");
                     lbTotDesconto.Text = totVlDesconto.ToString("###,###,##0.00");
@@ -123,8 +123,8 @@ namespace DPromocional
                     pnSintetico.Visible = false;
                     pnAnaliticoAjusteCredito.Visible = false;
 
-                    lbPeriodoVendaNaoPolitica.Text = "Período de apuração " + row.Cells[0].Text.ToString().Substring(57).ToLower() + " - Vendas fora da Política de Vendas";
-                    lbPeriodoVendaPolitica.Text = "Período de apuração " + row.Cells[0].Text.ToString().Substring(57).ToLower() + " - Vendas de acordo com a Política de Vendas";                    
+                    //lbPeriodoVendaNaoPolitica.Text = "Período de apuração " + row.Cells[0].Text.ToString().Substring(57).ToLower(); // + " - Vendas fora da Política de Vendas";
+                    lbPeriodoVendaPolitica.Text = "Período de apuração " + row.Cells[0].Text.ToString().Substring(57).ToLower(); // + " - Vendas de acordo com a Política de Vendas";                    
                 }
                 catch (Exception ex)
                 {
@@ -233,7 +233,101 @@ namespace DPromocional
             }
         }
 
+        protected void imgrelatorio_Click(object sender, ImageClickEventArgs e)
+        {
+
+            exportarExcelAnalitico();
+
+            //Response.Clear();
+            //Response.AddHeader("content-disposition", "attachment;filename=Relatorio.xls");
+            //Response.Charset = "";
+            //Response.ContentType = "application/Relatorio.xls";
+
+            //StringWriter stringWrite = new StringWriter();
+            //HtmlTextWriter htmlWrite = new HtmlTextWriter(stringWrite);
+
+            //gridVendaPolitica.RenderControl(htmlWrite);
+
+            //Response.Write(stringWrite.ToString());
+            //Response.End();
+
+        }
+
+        private void exportarExcelAnalitico()
+        {
+
+            DataTable dtrelexport = new DataTable();
+            //BuscaDados();
+            string nomeRelatorio = "Relatorio";
+            dtrelexport.Columns.Add("dt_geracao", typeof(string));
+            dtrelexport.Columns.Add("ds_vendedor", typeof(string));
+            dtrelexport.Columns.Add("nr_contrato", typeof(string));
+            dtrelexport.Columns.Add("id_pedido", typeof(string));
+            dtrelexport.Columns.Add("ds_produto", typeof(string));
+            dtrelexport.Columns.Add("vl_unitario", typeof(string));
+            dtrelexport.Columns.Add("vl_desconto", typeof(string));
+            dtrelexport.Columns.Add("pc_desconto", typeof(string));
+            dtrelexport.Columns.Add("vl_basecom", typeof(string));
+            dtrelexport.Columns.Add("tp_pagamento", typeof(string));
+            dtrelexport.Columns.Add("vl_comissao", typeof(string));
+            dtrelexport.Columns.Add("pc_com", typeof(string));
+            dtrelexport.Columns.Add("tp_comissao", typeof(string));
+            dtrelexport.Columns.Add("tp_lancamento", typeof(string));
+            dtrelexport.Columns.Add("nr_diasCancelamento", typeof(string));
+            dtrelexport.Columns.Add("nr_parcelas", typeof(string));
+            dtrelexport.Columns.Add("parcela", typeof(string));
+
+
+            DataTable dt = (Session["RelPedidos"] as DataTable);
+            
+            dt.Columns.Remove("id_agenda");
+            dt.Columns.Remove("TpAgenda");
+
+            dt.Columns["dt_geracao"].ColumnName = "Data";
+            dt.Columns["ds_vendedor"].ColumnName = "Vendedor";
+            dt.Columns["nr_contrato"].ColumnName = "Contrato";
+            dt.Columns["id_pedido"].ColumnName = "CDV";
+            dt.Columns["ds_produto"].ColumnName = "Produto";
+            dt.Columns["vl_unitario"].ColumnName = "Valor";
+            dt.Columns["vl_desconto"].ColumnName = "Desconto";
+            dt.Columns["pc_desconto"].ColumnName = "% Desc";
+            dt.Columns["vl_basecom"].ColumnName = "Vl cobrado";
+            dt.Columns["tp_pagamento"].ColumnName = "Forma";
+            dt.Columns["vl_comissao"].ColumnName = "Comissão";
+            dt.Columns["pc_com"].ColumnName = "%";
+            dt.Columns["tp_comissao"].ColumnName = "Tipo";
+            dt.Columns["tp_lancamento"].ColumnName = "D/C";
+            dt.Columns["nr_diasCancelamento"].ColumnName = "Nr Dias Canc";
+            dt.Columns["nr_parcelas"].ColumnName = "Parcelas";
+            dt.Columns["parcela"].ColumnName = "Nr parcelas";
+
+            //Chamando método static, passando DataTable preenchido e nome do arquivo
+            ExportarParaExcelAnalitico(dt, nomeRelatorio);
+        }
+        //Exportando dados da proc para o Ms Excel
+        private void ExportarParaExcelAnalitico(DataTable dt_getLeadsAnaliticoPlanilha, string nome)
+        {
+            HttpContext context = HttpContext.Current;
+            context.Response.Clear();
+
+            foreach (DataColumn column in dt_getLeadsAnaliticoPlanilha.Columns)
+            {
+                context.Response.Write(column.ColumnName + "\t");
+            }
+            context.Response.Write(Environment.NewLine);
+
+            foreach (DataRow row in dt_getLeadsAnaliticoPlanilha.Rows)
+            {
+                for (int i = 0; i < dt_getLeadsAnaliticoPlanilha.Columns.Count; i++)
+                {
+                    context.Response.Write(row[i].ToString().Replace(";", string.Empty) + "\t");
+                }
+                context.Response.Write(Environment.NewLine);
+            }
+
+            context.Response.ContentType = "application/ms-excel";
+            context.Response.AppendHeader("Content-Disposition", "attachment; filename=" + nome + ".xls");
+            context.Response.End();
+        }
     }
-
-
 }

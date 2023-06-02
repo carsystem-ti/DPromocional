@@ -91,6 +91,7 @@
     <Content Include="dpAscx\PagamentoLiberacao.ascx" />
     <Content Include="Home.aspx" />
     <Content Include="img\atualizar.jpg" />
+    <Content Include="img\btn_excel.png" />
     <Content Include="img\cabLogin.jpg" />
     <Content Include="img\deletar.gif" />
     <Content Include="img\dinheiro-blog.jpg" />
